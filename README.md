@@ -6,6 +6,12 @@ A static multi-page website for Verse, customisable software for university comp
 
 Serve `dist/` with any static web server. No installation or build step is required. For example, run `python -m http.server 5184 --directory dist`, then open http://localhost:5184. Google Fonts and Three.js 0.160.0 load from CDNs; all other code is inline in each HTML page. If WebGL2 is unavailable, the home page's optical canvas provides a 2D fallback.
 
+## Deploy to Vercel
+
+Import this repository with the repository root as the project's Root Directory. The included `vercel.json` selects the static-site preset, skips installation and building, and serves `dist/`. The homepage and every page directory already contain their own `index.html`.
+
+Keep the Root Directory at the repository root, not `dist`, so Vercel can read this configuration. Pushing to the connected production branch triggers a fresh deployment. If you redeploy manually, use the latest commit containing `vercel.json`.
+
 ## Pages
 
 - `/` — original prism hero, coursework introduction and workspace perspectives
